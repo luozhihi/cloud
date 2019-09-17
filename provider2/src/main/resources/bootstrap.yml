@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: pro1
+  cloud:
+    config:
+      label: master
+      profile: test
+      name: application
+      uri: http://localhost:8081
+server:
+  port: 8084

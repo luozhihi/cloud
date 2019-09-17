@@ -4,15 +4,13 @@ spring:
   cloud:
     config:
       label: master
-      discovery:
-        enabled: true
-        service-id: config-server
       profile: test
       name: application
+      uri: http://localhost:8081
 server:
   port: 8083
-eureka:
-  client:
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:80/eureka/
+zuul:
+  routes:
+    test1:
+      path: /test1/**
+      serviceId: pro1

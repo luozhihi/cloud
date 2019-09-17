@@ -16,6 +16,6 @@ public class ConfigController {
     @RequestMapping("")
     @ResponseBody
     public String test(){
-        return config;
+        return config+8082;
     }
 }
